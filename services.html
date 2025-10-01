@@ -1,0 +1,123 @@
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { ChevronDown } from "lucide-react";
+
+const services = [
+  {
+    title: "Primary & Preventative Care Services",
+    items: [
+      "Annual health check-ups & screenings",
+      "Chronic disease management (diabetes, hypertension, heart health)",
+      "Vaccination & immunization clinics",
+      "Preventative lab testing (cholesterol, blood sugar, hormone balance)",
+      "Women’s health services (wellness exams, prenatal support)",
+      "Men’s health services (prostate screenings, vitality programs)",
+      "Pediatric wellness check-ups",
+    ],
+  },
+  {
+    title: "Mental & Emotional Health Services",
+    items: [
+      "Individual and family counseling",
+      "Group therapy sessions (stress, grief, addiction recovery support)",
+      "Tele-therapy and virtual mental health coaching",
+      "Stress management workshops",
+      "Mindfulness & meditation programs",
+      "Trauma-informed care services",
+      "Substance abuse recovery programs",
+    ],
+  },
+  {
+    title: "Holistic & Integrative Health Services",
+    items: [
+      "Nutritional counseling and meal planning",
+      "Herbal medicine consultations",
+      "Acupuncture & traditional healing therapies",
+      "Yoga, tai chi, and movement therapy classes",
+      "Reiki, energy healing, and sound therapy",
+      "Sleep health consultations",
+      "Preventative lifestyle coaching",
+    ],
+  },
+  {
+    title: "Community & Outreach Programs",
+    items: [
+      "Mobile health clinics (for rural or underserved areas)",
+      "Health fairs and free wellness screenings",
+      "School-based health education (nutrition, exercise, mental health awareness)",
+      "Workplace wellness programs (stress reduction, ergonomics, resilience training)",
+      "Chronic illness support groups",
+      "Indigenous health and wellness knowledge-sharing sessions",
+    ],
+  },
+  {
+    title: "Specialized Services",
+    items: [
+      "Physical therapy & rehabilitation",
+      "Pain management clinics (non-opioid, holistic focus)",
+      "Maternal & child health programs",
+      "Geriatric care services (aging gracefully, fall prevention, memory support)",
+      "Hospice and palliative care with holistic emphasis",
+      "Integrative oncology support (nutrition, mindfulness, alternative therapies alongside treatment)",
+      "Telehealth urgent care",
+    ],
+  },
+  {
+    title: "Wellness & Lifestyle Services",
+    items: [
+      "Fitness and movement classes (personalized programs)",
+      "Smoking cessation programs",
+      "Weight management and metabolic health services",
+      "Digital health app support (tracking habits, coaching through an Eloheh app)",
+      "Corporate wellness partnerships",
+      "Retreats focused on rest, renewal, and holistic health",
+    ],
+  },
+];
+
+export default function ServicesPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  return (
+    <div className="min-h-screen bg-[#f5f8fb] text-gray-800 font-sans">
+      <section className="relative bg-[#0d4d5c] py-16 text-center shadow-md">
+        <h1 className="text-4xl font-bold text-white">Our Healthcare Services</h1>
+        <p className="mt-4 text-lg max-w-2xl mx-auto text-[#dce7eb]">
+          At Eloheh, we believe in whole-person wellness — offering care that
+          nurtures the body, mind, and spirit. Explore our wide range of
+          services designed to bring balance and health to your life.
+        </p>
+      </section>
+
+      <section className="max-w-5xl mx-auto py-12 px-6 grid gap-6">
+        {services.map((service, index) => (
+          <Card
+            key={index}
+            className="border rounded-xl shadow bg-white hover:shadow-lg transition duration-300"
+          >
+            <button
+              className="w-full flex justify-between items-center p-6 text-left text-[#0d4d5c]"
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            >
+              <h2 className="text-xl font-semibold">{service.title}</h2>
+              <ChevronDown
+                className={`transition-transform ${
+                  openIndex === index ? "rotate-180" : ""
+                } text-[#ff5722]`}
+              />
+            </button>
+            {openIndex === index && (
+              <CardContent className="px-6 pb-6">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                  {service.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            )}
+          </Card>
+        ))}
+      </section>
+    </div>
+  );
+}

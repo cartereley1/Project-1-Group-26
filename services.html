@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react"; // Install with: npm install lucide-react
 
 const services = [
   {
@@ -80,6 +79,7 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f8fb] text-gray-800 font-sans">
+      {/* Hero Section */}
       <section className="relative bg-[#0d4d5c] py-16 text-center shadow-md">
         <h1 className="text-4xl font-bold text-white">Our Healthcare Services</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto text-[#dce7eb]">
@@ -89,9 +89,10 @@ export default function ServicesPage() {
         </p>
       </section>
 
+      {/* Services Section */}
       <section className="max-w-5xl mx-auto py-12 px-6 grid gap-6">
         {services.map((service, index) => (
-          <Card
+          <div
             key={index}
             className="border rounded-xl shadow bg-white hover:shadow-lg transition duration-300"
           >
@@ -107,15 +108,15 @@ export default function ServicesPage() {
               />
             </button>
             {openIndex === index && (
-              <CardContent className="px-6 pb-6">
+              <div className="px-6 pb-6">
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   {service.items.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
-              </CardContent>
+              </div>
             )}
-          </Card>
+          </div>
         ))}
       </section>
     </div>

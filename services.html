@@ -1,124 +1,120 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react"; // Install with: npm install lucide-react
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eloheh - Services</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f4f8, #d9e4ec);
+      color: #333;
+    }
+    header {
+      background-color: #004d66;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 1.05em;
+    }
+    h2 {
+      color: #004d66;
+      font-family: Georgia, serif; /* second font style */
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+    .highlight {
+      color: darkgreen;
+      font-size: 1.1em;
+    }
+    .notice {
+      color: #b22222;
+      font-style: italic;
+      font-size: 0.95em;
+    }
+    .link-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 5px 10px 0;
+      background-color: #ff5722;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .link-button:hover {
+      background-color: #e64a19;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><u>Eloheh</u> Healthcare Services</h1>
+    <p><i>Empowering Wellness Through Products & Care</i></p>
+  </header>
 
-const services = [
-  {
-    title: "Primary & Preventative Care Services",
-    items: [
-      "Annual health check-ups & screenings",
-      "Chronic disease management (diabetes, hypertension, heart health)",
-      "Vaccination & immunization clinics",
-      "Preventative lab testing (cholesterol, blood sugar, hormone balance)",
-      "Women’s health services (wellness exams, prenatal support)",
-      "Men’s health services (prostate screenings, vitality programs)",
-      "Pediatric wellness check-ups",
-    ],
-  },
-  {
-    title: "Mental & Emotional Health Services",
-    items: [
-      "Individual and family counseling",
-      "Group therapy sessions (stress, grief, addiction recovery support)",
-      "Tele-therapy and virtual mental health coaching",
-      "Stress management workshops",
-      "Mindfulness & meditation programs",
-      "Trauma-informed care services",
-      "Substance abuse recovery programs",
-    ],
-  },
-  {
-    title: "Holistic & Integrative Health Services",
-    items: [
-      "Nutritional counseling and meal planning",
-      "Herbal medicine consultations",
-      "Acupuncture & traditional healing therapies",
-      "Yoga, tai chi, and movement therapy classes",
-      "Reiki, energy healing, and sound therapy",
-      "Sleep health consultations",
-      "Preventative lifestyle coaching",
-    ],
-  },
-  {
-    title: "Community & Outreach Programs",
-    items: [
-      "Mobile health clinics (for rural or underserved areas)",
-      "Health fairs and free wellness screenings",
-      "School-based health education (nutrition, exercise, mental health awareness)",
-      "Workplace wellness programs (stress reduction, ergonomics, resilience training)",
-      "Chronic illness support groups",
-      "Indigenous health and wellness knowledge-sharing sessions",
-    ],
-  },
-  {
-    title: "Specialized Services",
-    items: [
-      "Physical therapy & rehabilitation",
-      "Pain management clinics (non-opioid, holistic focus)",
-      "Maternal & child health programs",
-      "Geriatric care services (aging gracefully, fall prevention, memory support)",
-      "Hospice and palliative care with holistic emphasis",
-      "Integrative oncology support (nutrition, mindfulness, alternative therapies alongside treatment)",
-      "Telehealth urgent care",
-    ],
-  },
-  {
-    title: "Wellness & Lifestyle Services",
-    items: [
-      "Fitness and movement classes (personalized programs)",
-      "Smoking cessation programs",
-      "Weight management and metabolic health services",
-      "Digital health app support (tracking habits, coaching through an Eloheh app)",
-      "Corporate wellness partnerships",
-      "Retreats focused on rest, renewal, and holistic health",
-    ],
-  },
-];
+  <main>
+    <h2><b>Our Core Services</b></h2>
+    <p>
+      At Eloheh, we combine modern healthcare innovation with a compassionate approach.  
+      Our services are designed to meet the needs of families, professionals, and communities.  
+      <span class="notice">We believe that true healthcare goes beyond treatment — it is about prevention, education, and accessibility.</span>
+    </p>
 
-export default function ServicesPage() {
-  const [openIndex, setOpenIndex] = useState(null);
+    <img src="https://images.unsplash.com/photo-1606813902734-9a9e4d9b5c2d" alt="Healthcare services illustration">
 
-  return (
-    <div className="min-h-screen bg-[#f5f8fb] text-gray-800 font-sans">
-      {/* Hero Section */}
-      <section className="relative bg-[#0d4d5c] py-16 text-center shadow-md">
-        <h1 className="text-4xl font-bold text-white">Our Healthcare Services</h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto text-[#dce7eb]">
-          At Eloheh, we believe in whole-person wellness — offering care that
-          nurtures the body, mind, and spirit. Explore our wide range of
-          services designed to bring balance and health to your life.
-        </p>
-      </section>
+    <h2>What We Offer</h2>
+    <ol>
+      <li>Personalized Wellness Plans</li>
+      <li>Telehealth Consultations</li>
+      <li>On-site Clinical Services</li>
+      <li>Pharmaceutical and Supplement Products</li>
+    </ol>
 
-      {/* Services Section */}
-      <section className="max-w-5xl mx-auto py-12 px-6 grid gap-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="border rounded-xl shadow bg-white hover:shadow-lg transition duration-300"
-          >
-            <button
-              className="w-full flex justify-between items-center p-6 text-left text-[#0d4d5c]"
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            >
-              <h2 className="text-xl font-semibold">{service.title}</h2>
-              <ChevronDown
-                className={`transition-transform ${
-                  openIndex === index ? "rotate-180" : ""
-                } text-[#ff5722]`}
-              />
-            </button>
-            {openIndex === index && (
-              <div className="px-6 pb-6">
-                <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  {service.items.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        ))}
-      </section>
-    </div>
-  );
-}
+    <h2>Specialized Care Categories</h2>
+    <ul>
+      <li><span class="highlight">Preventive Care</span> – screenings, vaccinations, and checkups</li>
+      <li><span style="color:navy;">Chronic Disease Management</span> – diabetes, heart disease, and more</li>
+      <li><span style="color:darkred;">Mental Health Support</span> – counseling and therapy</li>
+    </ul>
+
+    <p>
+      Learn more about healthcare standards at the  
+      <a href="https://www.cdc.gov" target="_blank" class="link-button">CDC Website</a>
+    </p>
+
+    <p>
+      <a href="mailto:info@elohehhealth.com" class="link-button">✉️ Contact Us</a>
+      <a href="Eloheh_Services_Brochure.pdf" download class="link-button">📄 Download Services Brochure</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Last Modified: <script>document.write(new Date().toLocaleDateString());</script></p>
+  </footer>
+</body>
+</html>

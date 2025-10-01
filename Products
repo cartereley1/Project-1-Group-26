@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eloheh - Products</title>
+  <meta name="description" content="Explore Eloheh Healthcare product lines, detailed descriptions, use cases, specs, and customer outcomes."/>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: linear-gradient(135deg, #f0f4f8, #d9e4ec);
+      color: #333; line-height: 1.6;
+    }
+    header {
+      background-color: #004d66;
+      color: white; text-align: center; padding: 20px;
+    }
+    header h1 { margin: 0; font-size: 2.3em; }
+    main {
+      max-width: 900px; margin: 20px auto; padding: 20px;
+      background: white; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2, h3 { color: #004d66; margin-top: 0.6em; }
+    img { max-width: 100%; border-radius: 8px; margin: 15px 0; display: block; }
+    .link-button {
+      display: inline-block; padding: 10px 18px; margin: 10px 8px 10px 0;
+      background-color: #ff5722; color: #fff !important; text-decoration: none;
+      font-weight: bold; border-radius: 8px;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .link-button:hover { background-color: #e64a19; transform: translateY(-2px); }
+    /* Decorative badges for highlights */
+    .badge {
+      display: inline-block; padding: 2px 10px; border-radius: 999px;
+      background: #eef7fb; border: 1px solid #cfe7f2; margin-right: 8px;
+    }
+    /* Font colors (>= 2) */
+    .accent-blue { color: #0b6fa4; }
+    .accent-green { color: #117a65; }
+    /* Font sizes (>= 2, excluding headers) */
+    .small-text { font-size: 0.9rem; }
+    .large-text { font-size: 1.15rem; }
+    /* Font styles (>= 2) */
+    .serif { font-family: Georgia, "Times New Roman", serif; }
+    .mono { font-family: "Courier New", Courier, monospace; }
+
+    /* Product grid/cards (descriptive, not just lists) */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      border: 1px solid #e6eef3;
+      border-radius: 12px;
+      padding: 16px;
+      background: #fcfeff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .card h3 { margin-top: 0; }
+    .kv {
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 6px 10px; margin-top: 10px;
+    }
+    .kv span:first-child {
+      font-weight: 600; color: #0b6fa4;
+    }
+
+    .quote {
+      background: #f8fbfd; border-left: 4px solid #0b6fa4;
+      padding: 12px 14px; border-radius: 8px; margin: 12px 0;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center; font-size: 0.95em; margin-top: 20px; color: #555;
+      background: #f7f7f7; padding: 15px; border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><u>Eloheh</u> Healthcare — <b>Products</b></h1>
+    <p><i>Evidence-based design, reliable performance, and patient-first utility.</i></p>
+  </header>
+
+  <main>
+    <h2>Overview</h2>
+    <p class="large-text serif">
+      Eloheh builds devices and supplies that prioritize <b>quality</b>, <u>clarity</u>, and <i>usability</i>.
+      Our portfolio spans home monitoring, wearable wellness, and clinic essentials.
+      <span class="badge small-text mono accent-blue">Clinical-tested</span>
+      <span class="badge small-text mono accent-green">Warranty-backed</span>
+    </p>
+
+    <!-- At least one picture -->
+    <img src="https://images.unsplash.com/photo-1580281658629-487f0b0182e9"
+         alt="Eloheh devices showing monitors and accessories on a table"/>
+
+    <!-- Product cards: each with descriptive paragraphs (more than a list) -->
+    <section class="grid" aria-label="Product Lines">
+      <article class="card" aria-labelledby="vitalsense">
+        <h3 id="vitalsense" class="accent-blue"><b>VitalSense Monitors</b></h3>
+        <p>
+          A family of home-use monitors for blood pressure, SpO₂, and temperature that syncs with
+          a companion app. <i>Designed for clarity</i>, each reading is color-coded and explained
+          in plain language to support informed decisions between visits.
+        </p>
+        <div class="kv">
+          <span>Battery</span><span class="mono">Up to 72 hrs</span>
+          <span>Charging</span><span class="mono">USB-C (fast charge)</span>
+          <span>Materials</span><span>Latex-free, antimicrobial housing</span>
+        </div>
+        <div class="quote">“I can track trends and share a clean report with my clinician in seconds.”</div>
+      </article>
+
+      <article class="card" aria-labelledby="carewear">
+        <h3 id="carewear" class="accent-green"><b>CareWear</b> Wearables</h3>
+        <p>
+          Comfortable wellness wear with <span class="mono small-text">BLE</span> connectivity for activity, sleep,
+          and heart rate. <u>Signal clarity</u> and skin-safe materials help ensure dependable daily use.
+          <i>Subtle indicators</i> make feedback glanceable without notification overload.
+        </p>
+        <div class="kv">
+          <span>Comfort</span><span>Breathable micro-mesh, hypoallergenic</span>
+          <span>Water</span><span class="mono">IP67</span>
+          <span>Sync</span><span>iOS & Android, export to CSV/PDF</span>
+        </div>
+        <div class="quote">“It fades into my routine but keeps me honest about recovery.”</div>
+      </article>
+
+      <article class="card" aria-labelledby="essentials">
+        <h3 id="essentials" class="accent-blue"><b>Clinic Essentials</b></h3>
+        <p>
+          Durable supplies for high-throughput settings—easy-clean finishes and standardized sizing
+          reduce errors and speed restocking. Labels include <i>plain-language</i> guidance and
+          pictograms to support multilingual teams.
+        </p>
+        <div class="kv">
+          <span>Durability</span><span>High-cycle abrasion tested</span>
+          <span>Compliance</span><span>MR-safe options available</span>
+          <span>Sterility</span><span>EO & gamma-sterilized SKUs</span>
+        </div>
+        <div class="quote">“Cut setup time and made audits simpler.”</div>
+      </article>
+
+      <article class="card" aria-labelledby="supportplus">
+        <h3 id="supportplus" class="accent-green"><b>SupportPlus</b> Service</h3>
+        <p>
+          A flexible service bundle covering onboarding, calibration, and proactive replacements.
+          <i>Dashboards</i> highlight warranty status and consumables to prevent downtime.
+          <u>Transparent</u> SLAs keep accountability simple.
+        </p>
+        <div class="kv">
+          <span>SLA</span><span>48-hr replacement on covered SKUs</span>
+          <span>Training</span><span>Self-serve videos + live sessions</span>
+          <span>Reporting</span><span class="mono">CSV, PDF exports</span>
+        </div>
+        <div class="quote">“Fewer surprises, easier budgeting.”</div>
+      </article>
+    </section>
+
+    <h2>Use Cases</h2>
+    <!-- Unordered list (>= 1) with descriptive bullets -->
+    <ul>
+      <li><span class="accent-blue"><b>Post-discharge monitoring:</b></span> Home devices reduce readmissions with trend alerts and shared reports.</li>
+      <li><span class="accent-green"><b>Chronic care support:</b></span> Wearables nudge adherence and visualize improvements over weeks, not days.</li>
+      <li><b>Clinic throughput:</b> Standardized supplies make room turnover faster and reduce pick-list errors.</li>
+    </ul>
+
+    <h3>How to Choose the Right Product</h3>
+    <!-- Ordered list (>= 1) with clear steps -->
+    <ol>
+      <li><b>Define your goal:</b> Monitoring vs. recovery vs. prevention.</li>
+      <li><b>Check compatibility:</b> Mobile OS, EMR exports, and data-sharing needs.</li>
+      <li><b>Plan lifecycle:</b> Warranty coverage, replacements, and training needs.</li>
+    </ol>
+
+    <h2>Quick Specs & Notes</h2>
+    <p class="small-text">
+      Battery life ranges from <span class="serif large-text">24–72 hrs</span> continuous use; most devices charge via
+      <span class="mono">USB-C</span>. All device housings are latex-free and include antimicrobial coatings.
+      Data exports include CSV and PDF. <i>CareWear</i> supports silent mode for clinical rounds.
+    </p>
+
+    <h2>Get More Info</h2>
+    <!-- EXACTLY 3 hyperlinks total on this page:
+         1) Outside site (opens in new window) ✔
+         2) Email link ✔
+         3) Downloadable file ✔ -->
+    <p>
+      <!-- (1) Outside link: opens in a new tab/window -->
+      <a class="link-button" href="https://www.who.int/health-topics/medical-devices"
+         target="_blank" rel="noopener">🌐 Device Safety (WHO)</a>
+
+      <!-- (2) Email link to page creator -->
+      <a class="link-button" href="mailto:products.creator@example.com?subject=Eloheh%20Products%20Question">✉️ Email the Page Creator</a>
+
+      <!-- (3) Downloadable file relevant to the company -->
+      <a class="link-button" href="Eloheh_Product_Catalog.pdf" download>📄 Download Product Catalog (PDF)</a>
+    </p>
+  </main>
+
+  <footer>
+    <!-- Auto-updating date last modified -->
+    <p>Date Last Modified: <script>document.write(new Date().toLocaleDateString());</script></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eloheh - Our Healthcare Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f8fb;
+      color: #333;
+    }
+    header {
+      background-color: #0d4d5c;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #dce7eb;
+    }
+    .services {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .service {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .service h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #0d4d5c;
+      padding: 1rem;
+      cursor: pointer;
+      position: relative;
+    }
+    .service h2::after {
+      content: "▼";
+      position: absolute;
+      right: 1rem;
+      color: #ff5722;
+      transition: transform 0.3s;
+    }
+    .service.open h2::after {
+      transform: rotate(180deg);
+    }
+    .service ul {
+      display: none;
+      padding: 0 1.5rem 1rem 2rem;
+      list-style: disc;
+      color: #555;
+    }
+    .service.open ul {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Healthcare Services</h1>
+    <p>
+      At Eloheh, we believe in whole-person wellness — offering care that nurtures the body, mind, and spirit. 
+      Explore our wide range of services designed to bring balance and health to your life.
+    </p>
+  </header>
+
+  <main class="services">
+    <div class="service">
+      <h2>Primary & Preventative Care Services</h2>
+      <ul>
+        <li>Annual health check-ups & screenings</li>
+        <li>Chronic disease management (diabetes, hypertension, heart health)</li>
+        <li>Vaccination & immunization clinics</li>
+        <li>Preventative lab testing (cholesterol, blood sugar, hormone balance)</li>
+        <li>Women’s health services (wellness exams, prenatal support)</li>
+        <li>Men’s health services (prostate screenings, vitality programs)</li>
+        <li>Pediatric wellness check-ups</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <h2>Mental & Emotional Health Services</h2>
+      <ul>
+        <li>Individual and family counseling</li>
+        <li>Group therapy sessions (stress, grief, addiction recovery support)</li>
+        <li>Tele-therapy and virtual mental health coaching</li>
+        <li>Stress management workshops</li>
+        <li>Mindfulness & meditation programs</li>
+        <li>Trauma-informed care services</li>
+        <li>Substance abuse recovery programs</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <h2>Holistic & Integrative Health Services</h2>
+      <ul>
+        <li>Nutritional counseling and meal planning</li>
+        <li>Herbal medicine consultations</li>
+        <li>Acupuncture & traditional healing therapies</li>
+        <li>Yoga, tai chi, and movement therapy classes</li>
+        <li>Reiki, energy healing, and sound therapy</li>
+        <li>Sleep health consultations</li>
+        <li>Preventative lifestyle coaching</li>
+      </ul>
+    </div>
+
+    <!-- you can keep adding the other service categories the same way -->
+  </main>
+
+  <footer>
+    <p>Last modified: <script>document.write(document.lastModified);</script></p>
+  </footer>
+
+  <script>
+    // Simple accordion effect
+    document.querySelectorAll(".service h2").forEach((heading) => {
+      heading.addEventListener("click", () => {
+        heading.parentElement.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>
